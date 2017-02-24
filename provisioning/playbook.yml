@@ -1,0 +1,19 @@
+---
+- hosts: all
+  become: true
+  roles:
+    - role: AnsibleShipyard.ansible-zookeeper
+    - {
+        role: "ansible-kafka",
+        kafka_hosts: ["0.0.0.0"],
+        kafka_zookeeper_hosts: ["0.0.0.0"],
+        kafka_version: 0.10.1.1,
+        kafka_scala_serverion: 2.11
+    }
+  tasks:
+    - name: Create 'test-one' topic
+      shell: /usr/local/kafka/bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test-one
+
+    - name: Create 'test-two' topic
+      shell: /usr/local/kafka/bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test-two
+
