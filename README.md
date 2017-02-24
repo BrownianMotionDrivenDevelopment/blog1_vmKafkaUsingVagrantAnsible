@@ -3,7 +3,7 @@
 ## Overview
 
 The code here serves to illustrate the article of the same name 
-[Create a VM Image With Apache Kafka Configured Using Vagrant and Ansible](https://andyboyle.io/2017/02/24/create-a-vm-image-with-apache-kafka-configured-using-vagrant-and-ansible/)
+[Create a VM Image With Apache Kafka Configured Using Vagrant and Ansible](https://andyboyle.io/2017/02/23/create-a-vm-image-with-apache-kafka-configured-using-vagrant-and-ansible/)
 
 The article is a simple step-by-step process to build a local VM with Apache Kafka preinstalled and configured with a couple of topics already created.
 
